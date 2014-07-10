@@ -16,7 +16,6 @@ define([
 	SelectView.prototype._initialize = function () {
 		var options = this._options;
 		this._collection = options.collection;
-		this._except = options.except;
 
 		this._select = this._el.appendChild(document.createElement('select'));
 		this._select.addEventListener('change', this._onSelect.bind(this));
@@ -34,18 +33,15 @@ define([
 	SelectView.prototype.render = function () {
 		var format = this._options.format,
 		    collection = this._collection.data(),
-			except = this._except,
 			i, len, item,
 			buf = [];
 
 		for (i=0, len = collection.length; i < len; i++) {
 			item = collection[i];
-			if (item !== except) {
-				buf.push(
-					'<option value="', i, '">',
-					format(item),
-					'</option>');
-			}
+			buf.push(
+				'<option value="', i, '">',
+				format(item),
+				'</option>');
 		}
 		this._select.innerHTML = buf.join('');
 	};

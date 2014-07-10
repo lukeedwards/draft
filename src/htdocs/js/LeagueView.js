@@ -38,13 +38,11 @@ define([
 		};
 
 		this._from = new SelectView({
-			except: null,
 			collection: this._league,
 			el: el.querySelector('.from'),
 			format: formatTeam
 		});
 		this._to = new SelectView({
-			except: null,
 			collection: new Collection(),
 			el: el.querySelector('.to'),
 			format: formatTeam
@@ -81,7 +79,6 @@ define([
 			new SelectView({
 				el: this._el.querySelector('.frompicks').appendChild(
 						document.createElement('div')),
-				except: null,
 				// todo, use fromTeam picks collection
 				collection: new Collection([
 					{id: 1, name: 'Pick 1'},
@@ -110,7 +107,6 @@ define([
 			new SelectView({
 				el: this._el.querySelector('.topicks').appendChild(
 						document.createElement('div')),
-				except: null,
 				// todo, use fromTeam picks collection
 				collection: new Collection([
 					{id: 1, name: 'Pick 1'},
