@@ -154,6 +154,10 @@ module.exports = function (grunt) {
 					name: 'index',
 					baseUrl: appConfig.src + '/htdocs/js',
 					out: appConfig.dist + '/htdocs/js/index.js',
+					paths: {
+						'mvc': '../../../node_modules/hazdev-webutils/src/mvc',
+						'util': '../../../node_modules/hazdev-webutils/src/util'
+					},
 					optimize: 'uglify2',
 					mainConfigFile: appConfig.src + '/htdocs/js/index.js',
 					useStrict: true,
