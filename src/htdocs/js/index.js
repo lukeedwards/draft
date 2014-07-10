@@ -17,7 +17,7 @@ require([
 
 	new DraftApplication({
 		el: document.querySelector('#draft'),
-		crudUrl: 'http://twss.azurewebsites.net/crud.php'
+		crudUrl: 'http://twss.azurewebsites.net/trade/crud.php'
 	});
 
 });
